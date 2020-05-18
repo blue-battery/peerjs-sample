@@ -1,11 +1,13 @@
 version: '3'
 services:
   peerjs:
-    container_name: Peerjs-APP
+    container_name: peerjs
     build: ./
+    ports:
+      - "8080:8080"
     volumes:
-      - ./:/Peerjs/
-    working_dir: /Peerjs/
+      - ./:/peerjs/
+    working_dir: /peerjs/
     privileged: true
-    healthcheck:
-      test: "exit 0"
+    # healthcheck:
+    #   test: "exit 0"
