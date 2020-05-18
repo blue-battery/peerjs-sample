@@ -1,5 +1,10 @@
-FROM ubuntu
+FROM gitpod/workspace-full
 
-CMD ["/bin/bash"]
- 
-EXPOSE 80
+USER gitpod
+
+
+#FROM ubuntu
+#
+#CMD ["/bin/bash"]
+#
+#EXPOSE 80
