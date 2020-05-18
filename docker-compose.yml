@@ -1,0 +1,11 @@
+version: '3'
+services:
+  peerjs:
+    container_name: Peerjs-APP
+    build: ./
+    volumes:
+      - ./:/Peerjs/
+    working_dir: /Peerjs/
+    privileged: true
+    healthcheck:
+      test: "exit 0"
