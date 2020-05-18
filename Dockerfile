@@ -1,5 +1,4 @@
 FROM ubuntu
-USER liaox
 
 CMD ["/bin/bash"]
  
