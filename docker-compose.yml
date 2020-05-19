@@ -7,9 +7,7 @@ services:
       context: ./
       dockerfile: ./docker/peerjs/Dockerfile
     ports:
-      - "81:81"
-      - "8443:8443"
-      - "9000:9000"
+      - "8080:8080"
     volumes:
       - ./peerjs:/peerjs/
     working_dir: /peerjs/

@@ -9,7 +9,9 @@
 ##### Nodejs
 ##### Chrome
 ### 本机启用/调试方法
-npm install serve-index peer 安装
+___
+##安装
+npm install peer  serve-index 
 
 1,npm install -g npm-check-updates
 2,ncu -u

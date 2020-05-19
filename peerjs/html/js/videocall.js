@@ -102,7 +102,8 @@ window.onload = function () {
     //连接到peerjs服务器的选项
     // let connOption = { host: 'localhost', port: 9000, path: '/', debug: 3 };
     // let connOption = { host: '13.115.162.229', port: 9000, path: '/', debug: 3 };
-    let connOption = { host: 'localhost', port: 9000, path: '/', debug: 3 };
+    // let connOption = { host: 'localhost', port: 9000, path: '/', debug: 3 };
+    let connOption = {};
 
 //register处理
 btnRegister.onclick = function () {

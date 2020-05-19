@@ -31,6 +31,6 @@ COPY peerjs /peerjs
 COPY peerjs2 /peerjs2
 WORKDIR /peerjs
 #RUN ls && pwd
-RUN [ "npm", "install", "serve-index", "peer"]
+RUN [ "npm", "install", "peer", "serve-index"]
 
-CMD [ "node", "server.js" ]
+CMD ["node","server.js"]
