@@ -37,7 +37,7 @@ var htmlApp = express();
 htmlApp.use(serveIndex('./html'));
 htmlApp.use(express.static("./html"))
 // var httpsServer = https.createServer(credentials, htmlApp);
-var httpsServer = http.createServer(htmlApp);
-// httpsServer.listen(81, "0.0.0.0");
-httpsServer.listen(81, "47.104.94.124");
+var httpServer = http.createServer(htmlApp);
+httpServer.listen(8080, "0.0.0.0");
+// httpsServer.listen(81, "47.104.94.124");
 
