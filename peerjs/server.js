@@ -1,5 +1,5 @@
 var fs = require('fs');
- var PeerServer = require('peer').PeerServer;
+var PeerServer = require('peer').PeerServer;
 
 var credentials = {
   key: fs.readFileSync('key/rsa_private.key'),
@@ -7,12 +7,13 @@ var credentials = {
 }
 // const customGenerationFunction = () => (Math.random().toString(36) + '0000000000000000000').substr(2, 16);
 var server = PeerServer({
-  host:"13.115.162.229",
+  // host:"13.115.162.229",
   port: 9000,
-  ssl: credentials,
+  // ssl: credentials,
   // generateClientId: customGenerationFunction,
-  proxied: true,
+  // proxied: true,
   path:"/",
+  // path:"/myapp",
   debug: 3,
     // key:"",
   config: {
@@ -29,13 +30,14 @@ var server = PeerServer({
 
 /** 构建html页 */
 var https = require('https');
-// var http = require('http');
+var http = require('http');
 var serveIndex = require('serve-index');
 var express = require("express");       
 var htmlApp = express();
 htmlApp.use(serveIndex('./html'));
 htmlApp.use(express.static("./html"))
-var httpsServer = https.createServer(credentials, htmlApp);
-// var httpsServer = http.createServer(htmlApp);
-httpsServer.listen(81, "0.0.0.0");
+// var httpsServer = https.createServer(credentials, htmlApp);
+var httpsServer = http.createServer(htmlApp);
+// httpsServer.listen(81, "0.0.0.0");
+httpsServer.listen(81, "47.104.94.124");
 
