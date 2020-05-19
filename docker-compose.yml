@@ -2,12 +2,17 @@ version: '3'
 services:
   peerjs:
     container_name: peerjs
-    build: ./
+    tty: true
+    build:
+      context: ./
+      dockerfile: ./docker/peerjs/Dockerfile
     ports:
-      - "8080:80"
+      - "81:81"
+      - "8443:8443"
+      - "9000:9000"
     volumes:
-      - ./:/peerjs/
+      - ./peerjs:/peerjs/
     working_dir: /peerjs/
     privileged: true
-    # healthcheck:
-    #   test: "exit 0"
+    healthcheck:
+      test: "exit 0"
